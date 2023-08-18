@@ -11,11 +11,11 @@ function Landing() {
         <div style={{
             fontFamily: 'monospace', fontSize: "28px", fontWeight: 700, letterSpacing: '.3rem', marginLeft: "100px", marginTop: "100px"
         }}>
-        <h2 >Welcome to Coursify-user</h2> 
+        <h2 >Welcome to Coursify</h2> 
         <p style={{fontSize:24, marginLeft: 35}}> Be a 100x Developer🚀</p>
         
         </div>
-        <img style={{height: 300, width: 350, marginTop: 120, marginLeft: 130 , borderRadius: 10}} src={pic1} alt="" />
+        <img style={{height: 300, width: 350, marginTop: 120, marginLeft: 180 , borderRadius: 10}} src={pic1} alt="" />
     </div>
         <div style={{marginTop: -110, marginLeft: 210}}> <p style={{fontSize:22 ,fontFamily: 'monospace', fontWeight: 600, letterSpacing: '.1rem'}}>Are you a new user?</p>
         <Button style={{height: 35,marginTop:18, marginLeft:50,borderRadius: 20}} onClick={()=> {navigate("/register")}} variant="contained" >Click here</Button> 
