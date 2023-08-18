@@ -5,7 +5,7 @@ import { Button } from '@mui/material';
 import { TextField,InputAdornment, IconButton } from '@mui/material';
 import { Visibility, VisibilityOff } from '@mui/icons-material';
 
-/// File is incomplete. You need to add input boxes to take input for users to login.
+
 function Login() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
