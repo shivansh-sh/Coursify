@@ -51,7 +51,7 @@ function Login() {
                 }).then((response)=> {
                     response.json().then((data)=> {
                         localStorage.setItem("token", data.token);
-                        alert("Login in successfully")
+                        alert(data.message)
                         window.location ="/showcourses"
                         // navigate("/showcourses")
 
