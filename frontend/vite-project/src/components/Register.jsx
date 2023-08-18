@@ -2,13 +2,13 @@ import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import { Card, Typography } from '@mui/material';
 import { Button } from '@mui/material';
-import { TextField } from '@mui/material';
+import { TextField,InputAdornment, IconButton } from '@mui/material';
+import { Visibility, VisibilityOff } from '@mui/icons-material';
 
-
-/// File is incomplete. You need to add input boxes to take input for users to register.
 function Register() {
     const [email, setEmail] = useState("");
     const [password, setPassword] = useState("");
+    const [showPassword, setShowPassword] = useState(false); // State to manage password visibility
     const navigate = useNavigate();
 
     return <div style={{
@@ -28,7 +28,22 @@ function Register() {
 
         <TextField onChange={ e => setEmail(e.target.value)} id="outlined-basic" label="email" variant="outlined" fullWidth={true}  size="small"/>
         <br/><br/>
-        <TextField onChange={ e => setPassword(e.target.value)} id="outlined-basic" label="password" variant="outlined" fullWidth={true}  size="small" />
+        <TextField onChange={ e => setPassword(e.target.value)} id="outlined-basic" label="password" variant="outlined" fullWidth={true}  size="small"
+          type={showPassword ? 'text' : 'password'} // Toggle password visibility
+          InputProps={{
+              endAdornment: (
+                  <InputAdornment position="end">
+                      <IconButton
+                          edge="end"
+                          onClick={() => setShowPassword(!showPassword)}
+                          onMouseDown={event => event.preventDefault()}
+                      >
+                          {showPassword ? <VisibilityOff /> : <Visibility />}
+                      </IconButton>
+                  </InputAdornment>
+                    ),
+                }}
+        />
         <br /><br/>
         <div style={{
             display: "flex",
