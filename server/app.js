@@ -1,3 +1,4 @@
+require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const cors = require('cors');
@@ -9,7 +10,7 @@ const userRouter = require('./routes/user');
 const bodyParser = require('body-parser');
 const PORT = process.env.PORT || 4000;
 
-require('./database/')
+require('./database')
 
 
 const app = express();
@@ -22,10 +23,10 @@ app.use('/admin', adminRouter);
 app.use('/user', userRouter);
 
  
- const DB_CONNECT = "mongodb+srv://shivansh12345:shivansh12345@cluster0.li2m2af.mongodb.net/";
+ 
 
 mongoose
-  .connect(DB_CONNECT, {
+  .connect(process.env.DB_CONNECT, {
     useNewUrlParser: true,
     useUnifiedTopology: true,
   })
