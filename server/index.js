@@ -7,6 +7,7 @@ const https = require('https');
 const adminRouter = require('./routes/admin');
 const userRouter = require('./routes/user'); 
 const bodyParser = require('body-parser');
+const PORT = process.env.PORT || 4000;
 
 require('./database/')
 
@@ -42,4 +43,4 @@ const sslServer = https.createServer({
 }, app)
 
 
-sslServer.listen(4000, ()=> console.log('secure server 😎 running on port 4000'))
+sslServer.listen(PORT, ()=> console.log('secure server 😎 running on port ${PORT}'))
