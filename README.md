@@ -10,7 +10,7 @@ Clone the repository on your machine. Open the project on your IDE and add depen
 🎥 I have uploaded a working demonstration of how coursify works on my linkedin - https://www.linkedin.com/feed/update/urn:li:activity:7098914079288754176/
 
 Built with 🛠
-Frontend - I have used React.js.
-Backend - I have used Express.js and Node.js.
-Database - I have used MongoDb.
-State Management - I have used Recoil.
+1. Frontend - I have used React.js.
+2. Backend - I have used Express.js and Node.js.
+3. Database - I have used MongoDb.
+4. State Management - I have used Recoil.
